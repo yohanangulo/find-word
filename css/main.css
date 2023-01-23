@@ -1,0 +1,107 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font: inherit;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif;
+  color: #94a3b8;
+}
+
+nav {
+  position: relative;
+}
+
+section {
+  min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+}
+
+section::after {
+  content: '';
+  position: absolute;;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url(https://tailwindcss.com/_next/static/media/hero-dark@90.dba36cdf.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  transform: rotate(180deg);
+  z-index: -10;
+}
+
+input {
+  margin-bottom: 2.5rem;
+  appearance: none;
+  border: none;
+  width: 100%;
+  padding: .75rem 1rem;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px rgba(248,250,252,.06) solid;
+  /* color: rgb(56 189 248); */
+  color: hsl(0, 0%, 87%);
+}
+
+input::placeholder {
+  color: #94a3b877;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+span {
+  color: rgb(56 189 248);
+}
+
+.result_info {
+  position: absolute;
+  font-size: 0.75rem;
+  color: rgba(248, 56, 168, 0.753);
+  top: 55px;
+  left: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 2.5rem 1.5rem;
+  background: rgba(0, 0, 0, 0.548);
+}
+
+.title {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: .5em;
+}
+
+.paragraph {
+  line-height: 2.3;
+}
+
+/* media queries */
+
+@media (min-width: 600px) {
+  .container {
+    width: max(500px, 50%);
+    height: auto;
+    border-radius: 1rem;
+    padding: 2.5rem;
+  }
+
+  section {
+    padding: 5rem 0;
+  }
+}
